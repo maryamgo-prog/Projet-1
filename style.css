@@ -1,17 +1,24 @@
 * {
-    font-family: fantasy;
     margin: 0;
     padding: 0;
 }
+
+body {
+    background-color: #F5F5DC;
+}
+
+
+/* navbar */
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: hsl(207, 33%, 42%);
-    color: hsl(0, 0%, 100%);
-    padding-right: 40px;
-    padding-left: 40px;
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(174, 26%, 45%);
+    padding-right: 15px;
+    padding-left: 30px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .list {
@@ -19,11 +26,129 @@ nav {
     justify-content: center;
     align-items: center;
     gap: 50px;
-    font-size: 15px;
-    background-color: transparent;
+    font-family: "poppins";
+    font-size: 20px;
+    list-style: none;
+    padding-left: 100px;
 }
 
-img {
-    width: 50px;
-    height: 50px;
+.logo {
+    width: 85px;
+    height: 85px;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.search-input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 13px;
+    flex: 1;
+}
+
+.search-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+#icon {
+    width: 27px;
+    height: 27px;
+}
+
+
+/* Formulaire */
+
+h1 {
+    text-align: center;
+    color: #D4B886;
+    margin-top: 1px;
+    margin-bottom: 40px;
+}
+
+body {
+    background-color: #F5F5DC;
+}
+
+.form-container {
+    max-width: 600px;
+    margin: 40px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: none;
+    border-radius: 10px;
+}
+
+
+/* Style des champs de formulaire */
+
+.group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #333;
+    margin-left: 10px;
+}
+
+span {
+    color: #cb0202;
+}
+
+input {
+    width: 95%;
+    padding: 9px;
+    margin-left: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+input:focus {
+    border-color: #D4B886;
+    outline: none;
+}
+
+
+/* Style du bouton de soumission */
+
+.submit-btn {
+    background-color: #D4B886;
+    color: hsl(0, 0%, 100%);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 55%;
+}
+
+.submit-btn:hover {
+    background-color: hsl(174, 26%, 45%);
+}
+
+#total {
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+    padding-right: 60px;
+    gap: 1px;
+}
+
+.total-submit {
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    padding-top: 20px;
 }
