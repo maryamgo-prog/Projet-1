@@ -4,11 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vendora</title>
+    <title>Vendora site</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+
     <!-- NavBar -->
     <nav>
         <img class="logo" src="logo.png" alt="Logo">
@@ -23,47 +24,204 @@
         </div>
     </nav>
 
-    <!-- Formulaire -->
-    <div class="formulaire">
-        <h1>Demande de produit</h1>
-        <form id="commande">
-            <div class="champ">
-                <label for="nom">Nom et Prénom <span>*</span></label>
-                <input type="text" id="nom" name="nom" placeholder="Votre nom et prénom">
-                <span id="error-nom" class="error-message"></span>
-            </div>
-            <div class="champ">
-                <label for="adresse">Adresse <span>*</span></label>
-                <input type="text" id="adresse" name="adresse" placeholder="Votre adresse">
-                <span id="error-adresse" class="error-message"></span>
-            </div>
-            <div class="champ">
-                <label for="code">Code Postal <span>*</span></label>
-                <input type="text" id="code" name="code" placeholder="Votre code postal">
-                <span id="error-code" class="error-message"></span>
-            </div>
-            <div class="champ">
-                <label for="tel">Téléphone <span>*</span></label>
-                <input type="tel" id="tel" name="tel" placeholder="Votre téléphone">
-                <span id="error-tel" class="error-message"></span>
-            </div>
-            <div class="champ">
-                <label for="quantite">Quantité <span>*</span></label>
-                <input type="number" id="quantite" name="quantite" min="1" max="100">
-                <span id="error-quantite" class="error-message"></span>
-            </div>
-            <div class="total">
-                <label for="total">Total (MAD)</label>
-                <span id="montant">0.00 DH</span>
-                <button type="submit" class="btn-envoyer">Envoyer</button>
-            </div>
-        </form>
-        <div id="message-succes">
-            La commande a été envoyée avec succès !
-        </div>
+    <!-- Image de la landing page -->
+    <div class="landing-image-container">
+        <img src="landing-image.png" alt="Image de Landing Page" class="landing-image">
     </div>
 
-    <script src="logic.js"></script>
+    <!-- Les avantages permanents -->
+    <main>
+        <h1 class="title">Vos avantages permanents</h1>
+    </main>
+
+    <section class="livraison-section">
+        <div class="livraison-container">
+            <div class="livraison-item">
+                <img src="image1.png" alt="Livraison" class="icon">
+                <p><b>Livraison Maroc à partir de 25 dhs</b></p>
+            </div>
+            <div class="livraison-item">
+                <img src="image3.png" alt="Sans produits chimiques" class="icon">
+                <p><b>Des produits 100 % sans produits chimiques.</b></p>
+            </div>
+
+            <div class="livraison-item">
+                <img src="image2.png" alt="Satisfaction guarantee" class="icon">
+                <p><b>Satisfaction garantie, beauté assurée !</b></p>
+            </div>
+
+            <div class="livraison-item">
+                <img src="image4.png" alt="Mini produit offert" class="icon">
+                <p><b>Mini produit offert dès 300 dhs d'achats</b></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Presentation de Vendora -->
+    <section class="presentation-section">
+        <div class="content-container">
+            <div class="image-container">
+                <img src="Presentimage.png" alt="Huile pour cheveux bio" />
+            </div>
+            <div class="description-container">
+                <h1><strong><u>Vendora: Soin Capillaire Réinventé</u></strong></h1>
+                <p>
+                    Vendora, ce n'est pas seulement une gamme de produits pour les cheveux ; c'est une véritable histoire enracinée dans la quête de soin et de bien-être. Inspirée par la richesse des traditions et des ingrédients naturels, Vendora réinvente les rituels capillaires
+                    en alliant expertise et passion. Chaque produit, est conçu pour révéler la beauté naturel de vos cheveux tout en racontant une histoire : celle d'un héritage de soin, transmis et réinventé pour les besoins d'aujourd'hui.
+                </p>
+                <div class="btn-container">
+                    <button class="learn-more-button"><b>En savoir plus</b></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Les produits vendus -->
+    <main>
+        <h1>Nos produits<span> bio </span>et naturelles !</h1>
+    </main>
+
+    <section>
+        <div class="cadre-container">
+            <div class="Produits">
+                <img src="serum product.png" alt="">
+                <h1>Sérum Capillaire Naturel </h1>
+                <span class="prix">250 MAD</span>
+                <a href="form.html">
+                    <button>Ajouter au panier</button>
+                </a>
+            </div>
+
+            <div class="Produits">
+                <img src="choimpoing product.png" alt="">
+                <h1>Vendora shampoing </h1>
+                <span class="prix">250 MAD</span>
+                <a href="form.html">
+                    <button>Ajouter au panier</button>
+                </a>
+            </div>
+
+            <div class="Produits">
+                <img src="crème product.png" alt="">
+                <h1>Crème Démêlante Bio</h1>
+                <span class="prix">250 MAD</span>
+                <a href="form.html">
+                    <button>Ajouter au panier</button>
+                </a>
+            </div>
+
+            <div class="Produits">
+                <img src="spray product.png" alt="">
+                <h1>Spray bio </h1>
+                <span class="prix">250 MAD</span>
+                <a href="form.html">
+                    <button>Ajouter au panier</button>
+                </a>
+            </div>
+
+        </div>
+
+        <!-- Description produits -->
+        <section class="product-presentation">
+            <div class="product-image">
+                <main>
+                    <h2><i><u>Sérum Capillaire Naturel</u></i></h2>
+                </main>
+
+                <img src="serum product.png" alt="Image du produit">
+            </div>
+            <div class="product-description">
+
+                <p>Le sérum capillaire naturel de Vendora est votre allié pour transformer vos cheveux en douceur. Conçu à partir d'ingrédients bio soigneusement sélectionnés, il offre une solution idéale pour hydrater, protéger et sublimer votre chevelure.
+                    Que vos cheveux soient secs, abîmés, ou difficiles à coiffer, ce sérum agit en profondeur pour leur redonner vie tout en respectant leur équilibre naturel.</p><br/>
+                <h3><b><u>Avantages:</u></b></h3>
+                <ul>
+                    <li>Formulée à partir d'ingrédients naturels.</li>
+                    <li>Idéale pour tous les types de cheveux.</li>
+                    <li>Utilisez-le quotidiennement pour des résultats optimaux.</li>
+                </ul>
+            </div>
+        </section>
+
+
+        <section class="product-presentation">
+            <div class="product-image">
+                <main>
+                    <h2><i><u>Vendora shampoing</u></i></h2>
+                </main>
+                <img src="choimpoing product.png" alt="Image du produit">
+            </div>
+
+            <div class="product-description">
+                <p>Le shampoing naturel Vendora nettoie vos cheveux tout en douceur. Enrichi d'actifs naturels, il purifie le cuir chevelu sans le dessécher, laissant vos cheveux propres, légers et pleins de vitalité.</p><br/>
+                <h3><b><u>Avantages:</u></b></h3>
+                <ul>
+                    <li>Nettoie efficacement tout en douceur.</li>
+                    <li>Hydrate le cuir chevelu et prévient les irritations.</li>
+                    <li>Réduisez les pellicules grâce à sa formule naturelle.</li>
+                </ul>
+            </div>
+        </section>
+
+
+        <section class="product-presentation">
+            <div class="product-image">
+                <main>
+                    <h2><i><u>Crème Démêlante Bio</u></i></h2>
+                </main>
+                <img src="crème product.png" alt="Image du produit">
+            </div>
+
+            <div class="product-description">
+                <p>Simplifiez votre routine capillaire avec la crème démêlante bio de Vendora. Conçue pour faciliter le coiffage, elle démêle les nœuds en douceur tout en nourrissant vos cheveux pour une finition soyeuse.</p><br/>
+                <h3><b><u>Avantages:</u></b></h3>
+                <ul>
+                    <li>Démêlez facilement les cheveux sans les casser.</li>
+                    <li>Apporte une hydratation durable et légère.</li>
+                    <li>Idéale pour tous types de cheveux, même les plus fragiles.</li>
+                </ul>
+            </div>
+        </section>
+
+
+        <section class="product-presentation">
+            <div class="product-image">
+                <main>
+                    <h2><i><u>Spray bio</u></i></h2>
+                </main>
+                <img src="spray product.png" alt="Image du produit">
+            </div>
+
+            <div class="product-description">
+                <p>Le spray bio Vendora est conçu pour protéger vos cheveux au quotidien. Léger et efficace, il forme un bouclier contre les agressions extérieures tout en laissant vos cheveux éclatants et revitalisés.</p><br/>
+                <h3><b><u>Avantages:</u></b></h3>
+                <ul>
+                    <li>Protège contre la chaleur des appareils de coiffure.</li>
+                    <li>Crée une barrière contre la pollution et les UV.</li>
+                    <li>Hydratez et revitalisez sans alourdir.</li>
+                </ul>
+            </div>
+        </section>
+
+    </section>
+    <!-- Footer -->
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2023 Vendora. Tous droits réservés.</p>
+            <ul class="footer-links">
+                <li><a href="#privacy">Politique de Confidentialité</a></li>
+                <li><a href="#terms">Conditions d'Utilisation</a></li>
+                <li><a href="#contact">Contactez-Nous</a></li>
+            </ul>
+            <div class="social-media">
+                <a href="https://www.facebook.com/" target="_blank">Facebook</a>
+                <a href="https://www.instagram.com/" target="_blank">Instagram</a>
+
+            </div>
+        </div>
+    </footer>
+
 </body>
 
 </html>

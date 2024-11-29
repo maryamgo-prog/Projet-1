@@ -7,7 +7,7 @@
 }
 
 body {
-    background-color: #F5F5DC;
+    background-color: #fffff1;
     font-family: "Poppins", sans-serif;
 }
 
@@ -159,10 +159,331 @@ label span,
     display: none;
     background-color: #d4edda;
     color: #155724;
-    padding: 10px;
-    border: 1px solid #c3e6cb;
-    border-radius: 5px;
+    padding: 2px;
+    border-bottom: 1px solid #155724;
+    border-radius: 3px;
     margin-top: 10px;
     font-size: 16px;
     text-align: center;
+}
+
+
+/* Styles de l'image de landing page */
+
+.landing-image-container {
+    width: 100%;
+    /* Prend toute la largeur de la page */
+}
+
+.landing-image {
+    width: 100%;
+    /* Prend toute la largeur du conteneur */
+    height: 1000px;
+    /* Conserve le ratio de l'image */
+}
+
+
+/* Styles de section avantages */
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 100px;
+    gap: 20px;
+}
+
+.title {
+    position: relative;
+    font-size: 50px;
+    color: rgb(73, 74, 64);
+    margin-bottom: 2rem;
+}
+
+.title::before,
+.title::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 150px;
+    height: 1px;
+    background-color: #ccc;
+    transform: translateY(-50%);
+}
+
+.title::before {
+    left: -160px;
+}
+
+.title::after {
+    right: -160px;
+}
+
+.livraison-section {
+    background-color: #f9f9f9;
+    /* Couleur de fond douce */
+    padding: 20px;
+    /* Espacement intérieur */
+}
+
+.livraison-container {
+    display: flex;
+    /* Utilise flexbox pour aligner les éléments en ligne */
+    justify-content: space-between;
+    /* Espace entre les éléments */
+    flex-wrap: wrap;
+    /* Permet aux éléments de passer à la ligne si nécessaire */
+    max-width: 1300px;
+    /* Largeur maximale pour le conteneur */
+    margin: 0 auto;
+    /* Centre le conteneur */
+}
+
+.livraison-item {
+    flex: 2;
+    /* Permet aux éléments de prendre de l'espace */
+    text-align: center;
+    /* Centre le texte */
+    margin: 20px;
+    /* Espace autour de chaque élément */
+    padding: 10px;
+    /* Espace intérieur */
+    background-color: #ffffff86;
+    /* Couleur de fond des éléments */
+    border: 1px solid #ccc;
+    /* Bordure autour des éléments */
+    border-radius: 8px;
+    /* Arrondir les coins */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Ombre légère pour le style */
+    transition: transform 0.3s;
+    /*Transition pour un effet au survol*/
+}
+
+.livraison-item:hover {
+    transform: scale(1.05);
+    /* Agrandissement au survol */
+}
+
+.icon {
+    width: 40px;
+    /* Largeur des icônes */
+    height: auto;
+    /* Garde les proportions de l'image */
+    margin-bottom: 10px;
+    /* Espace entre l'icône et le texte */
+}
+
+
+/*Presentation de Vendora */
+
+.presentation-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem 10rem;
+    margin-top: 2rem;
+    background-color: #f8f8f8;
+}
+
+.content-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.content-container img {
+    width: 100%;
+    height: auto;
+}
+
+.description-container h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: rgb(64, 149, 96);
+}
+
+.description-container p {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+.description-container .btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.description-container .learn-more-button {
+    padding: 1rem 2rem;
+    background-color: rgb(64, 149, 96);
+    font-size: 1rem;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+/* Styles de section produits */
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 100px;
+    gap: 20px;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+main h1 {
+    font-size: 50px;
+    color: rgb(56, 188, 30)
+}
+
+main h1 span {
+    color: rgb(8, 60, 11);
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+}
+
+main h1 {
+    font-size: 50px;
+}
+
+main h1 span {
+    color: rgb(150, 166, 85);
+}
+
+.cadre-container {
+    width: 1300px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.Produits {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 8px;
+    gap: 10px;
+    overflow: hidden;
+    box-shadow: 0px 11px 35px 0px rgba(198, 188, 188, 0.75);
+    transition: .5s ease-in-out;
+}
+
+.Produits:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 11px 35px 0px rgba(209, 241, 209, 0.9);
+    cursor: pointer;
+    /* Ajoute un curseur de pointeur pour indiquer que l'élément est clickable */
+}
+
+.Produits img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.Produits button {
+    width: 200px;
+    height: 40px;
+    background-color: rgb(161, 203, 98);
+    color: white;
+    font-size: 17px;
+    box-shadow: 0px 11px 35px 0px;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+
+/* Styles description produits */
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 100px;
+    gap: 20px;
+}
+
+main h2 {
+    font-size: 50px;
+    color: rgb(27, 28, 27)
+}
+
+.product-presentation {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+.product-image {
+    flex: 1;
+    margin: 10px;
+}
+
+.product-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.product-description {
+    flex: 2;
+    margin: 10px;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100px;
+    /* Ajustez cette valeur selon la hauteur de votre image */
+}
+
+.product-description h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    /* Espace ajouté entre le titre et le reste du contenu */
+}
+
+.product-description p {
+    font-size: 14px;
+    margin-bottom: 20px;
+    /* Espace entre le paragraphe et la liste */
+}
+
+.product-description ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.product-description li {
+    font-size: 14px;
+    margin-bottom: 10px;
+    /* Espace entre les éléments de la liste */
+}
+
+.product-description li:before {
+    content: "\2022";
+    font-size: 14px;
+    color: #666;
+    margin-right: 10px;
 }
