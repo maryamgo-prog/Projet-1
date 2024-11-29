@@ -7,7 +7,7 @@
 }
 
 body {
-    background-color: #fffff1;
+    background-color: #f7f7f5;
     font-family: "Poppins", sans-serif;
 }
 
@@ -18,7 +18,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: white;
+    background-color: rgb(243, 246, 230);
     color: rgb(87, 86, 86);
     padding: 0 30px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -486,4 +486,83 @@ main h2 {
     font-size: 14px;
     color: #666;
     margin-right: 10px;
+}
+
+
+/* Footer */
+
+footer {
+    background-color: #f8f8f8;
+    /* Couleur de fond du footer */
+    padding: 20px;
+    /* Espacement interne */
+    text-align: center;
+    /* Centrer le texte */
+    border-top: 1px solid #dddddd;
+    /* Bordure en haut du footer */
+}
+
+.footer-content {
+    max-width: 1200px;
+    /* Largeur maximale du contenu */
+    margin: 0 auto;
+    /* Centrer le contenu */
+}
+
+.footer-content p {
+    margin: 10px 0;
+    /* Espacement vertical autour du paragraphe */
+    color: #555;
+    /* Couleur du texte */
+}
+
+.footer-links {
+    list-style: none;
+    /* Supprimer les puces de la liste */
+    padding: 0;
+    /* Supprimer le padding */
+    margin: 10px 0;
+    /* Espacement vertical autour de la liste */
+}
+
+.footer-links li {
+    display: inline;
+    /* Afficher les éléments de la liste en ligne */
+    margin: 0 15px;
+    /* Espacement horizontal entre les liens */
+}
+
+.footer-links a {
+    text-decoration: none;
+    /* Supprimer le soulignement des liens */
+    color: #525955;
+    /* Couleur des liens */
+    transition: color 0.3s;
+    /* Animation de la couleur */
+}
+
+.footer-links a:hover {
+    color: rgb(73, 197, 83);
+    /* Couleur au survol */
+}
+
+.social-media {
+    margin-top: 15px;
+    /* Espacement au-dessus des icônes de médias sociaux */
+}
+
+.social-media a {
+    text-decoration: none;
+    /* Supprimer le soulignement des liens */
+    color: #1e1818;
+    /* Couleur des liens de médias sociaux */
+    margin: 0 10px;
+    /* Espacement horizontal entre les liens */
+    transition: color 0.3s;
+    /* Animation de la couleur */
+}
+
+.social-media a:hover {
+    color: rgb(73, 197, 83);
+    /* Couleur au survol */
 }
