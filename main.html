@@ -9,54 +9,59 @@
 </head>
 
 <body>
-    <!-- Navbar -->
+    <!-- NavBar -->
     <nav>
         <img class="logo" src="logo.png" alt="Logo">
-        <ul class="list">
+        <ul class="menu">
             <li>Accueil</li>
             <li>Produits</li>
             <li>Contact</li>
         </ul>
-        <div class="search">
-            <input type="text" placeholder="Rechercher des produits..." class="search-input">
-            <img id="icon" src="searchicon.png" alt="Icône de recherche">
+        <div class="recherche">
+            <input type="text" placeholder="Rechercher..." class="recherche-champ">
+            <img id="recherche-icone" src="searchicon.png" alt="Icône recherche">
         </div>
     </nav>
 
-    <!-- FORMULAIRE -->
-    <div class="form-container">
+    <!-- Formulaire -->
+    <div class="formulaire">
         <h1>Demande de produit</h1>
-        <form id="form">
-            <div class="group">
-                <label for="name">Nom et Prénom <span>*</span></label>
-                <input type="text" id="name" name="name" placeholder="Entrez votre nom et prénom" required>
+        <form id="commande">
+            <div class="champ">
+                <label for="nom">Nom et Prénom <span>*</span></label>
+                <input type="text" id="nom" name="nom" placeholder="Votre nom et prénom">
+                <span id="error-nom" class="error-message"></span>
             </div>
-            <div class="group">
-                <label for="address">Adresse <span>*</span></label>
-                <input type="text" id="address" name="address" placeholder="Entrez votre adresse" required>
+            <div class="champ">
+                <label for="adresse">Adresse <span>*</span></label>
+                <input type="text" id="adresse" name="adresse" placeholder="Votre adresse">
+                <span id="error-adresse" class="error-message"></span>
             </div>
-            <div class="group">
-                <label for="postal-code">Code Postal <span>*</span></label>
-                <input type="text" id="postal-code" name="postal-code" placeholder="Entrez votre code postal" required>
+            <div class="champ">
+                <label for="code">Code Postal <span>*</span></label>
+                <input type="text" id="code" name="code" placeholder="Votre code postal">
+                <span id="error-code" class="error-message"></span>
             </div>
-            <div class="group">
-                <label for="phone">Numéro de Téléphone <span>*</span></label>
-                <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="Entrez votre numéro de téléphone" required>
+            <div class="champ">
+                <label for="tel">Téléphone <span>*</span></label>
+                <input type="tel" id="tel" name="tel" placeholder="Votre téléphone">
+                <span id="error-tel" class="error-message"></span>
             </div>
-            <div class="group">
-                <label for="quantity">Quantité <span>*</span></label>
-                <input type="number" id="quantity" name="quantity" min="1" max="100" placeholder="Quantité" required>
-            </div>"
-
-            <div class="total-submit">
-                <label for="total" id="total">Total (MAD)</label>
-                <span id="total" name="total">0</span>
-                <button type="submit" class="submit-btn">E"nvoyer la commande</button>
+            <div class="champ">
+                <label for="quantite">Quantité <span>*</span></label>
+                <input type="number" id="quantite" name="quantite" min="1" max="100">
+                <span id="error-quantite" class="error-message"></span>
+            </div>
+            <div class="total">
+                <label for="total">Total (MAD)</label>
+                <span id="montant">0.00 DH</span>
+                <button type="submit" class="btn-envoyer">Envoyer</button>
             </div>
         </form>
+        <div id="message-succes">
+            La commande a été envoyée avec succès !
+        </div>
     </div>
-
-
 
     <script src="logic.js"></script>
 </body>

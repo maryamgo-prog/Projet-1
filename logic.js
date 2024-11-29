@@ -1,30 +1,49 @@
-document.getElementById('quantity').addEventListener('input', function() {
-    const quantity = parseInt(this.value); // Récupérer la quantité saisie
-    const pricePerItem = 100; // Prix fixe du produit
-    const total = quantity > 0 ? quantity * pricePerItem : 0; // Calculer le total si la quantité est valide
-    document.getElementById('total').value = total + ' Dh'; // Afficher le total dans le champ output
-});
+// Calculer le total
+const calculTotal = () => {
+    const quantite = document.getElementById('quantite').value || 0;
+    document.getElementById('montant').textContent = `${(quantite * 250).toFixed(2)} DH`;
+};
 
+// Valider le formulaire
+const validerFormulaire = (event) => {
+    event.preventDefault(); // Empêche l'envoi automatique du formulaire
+    resetErrorMessages(); // Réinitialise les messages d'erreur
 
-// let name = document.getElementById("name");
+    let isValid = true;
+    const champsObligatoires = ['nom', 'adresse', 'code', 'tel', 'quantite'];
 
-// let phone = document.getElementById("phone");
+    champsObligatoires.forEach(id => {
+        const valeur = document.getElementById(id).value.trim();
+        if (!valeur) {
+            afficherErreur(`error-${id}`, `Champ obligatoire.`);
+            isValid = false;
+        }
+    });
 
-// let addresse = document.getElementById("addresse");
+    ['code', 'tel'].forEach(id => {
+        const regex = id === 'code' ? /^\d{5}$/ : /^\d{5,10}$/;
+        if (!regex.test(document.getElementById(id).value)) {
+            afficherErreur(`error-${id}`, "Champ invalide.");
+            isValid = false;
+        }
+    });
 
-// let postalcode = document.getElementById("postal-code");
+    // Si le formulaire est valide, afficher le message de succès
+    if (isValid) {
+        document.getElementById('message-succes').style.display = 'block'; // Affiche le message de succès
+    }
+};
 
-// if (name != null && phone != null && addresse != null && postalcode != null) {
+// Afficher les erreurs
+const afficherErreur = (id, message) => document.getElementById(id).textContent = message;
 
-// }
+// Réinitialiser les erreurs
+const resetErrorMessages = () => {
+    ['nom', 'adresse', 'code', 'tel', 'quantite'].forEach(id => {
+        document.getElementById(`error-${id}`).textContent = '';
+    });
+};
 
-
-// let total = document.getElementById("total");
-// let quantity = document.getElementById("quantity")
-// total.innerHTML = quantity * 100;
-
-
-// let submitbtn = document.getElementsByClassName("submit-btn");
-// submitbtn.addEventListener("click", function() {
-//     alert(submitbtn.style.color = "geen");
-// });
+// Ajouter les événements
+document.getElementById('commande').addEventListener('submit', validerFormulaire);
+document.getElementById('quantite').addEventListener('input', calculTotal);
