@@ -1,7 +1,7 @@
 // Calculer le total
 const calculTotal = () => {
-    const quantite = document.getElementById('quantite').value || 0;
-    document.getElementById('montant').textContent = `${(quantite * 250).toFixed(2)} DH`;
+    const quantite = document.getElementById('quantite').value;
+    document.getElementById('prix').textContent = `${(quantite * 250).toFixed(2)} DH`;
 };
 
 // Valider le formulaire

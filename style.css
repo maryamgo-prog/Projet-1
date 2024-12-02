@@ -11,6 +11,28 @@ body {
     font-family: "Poppins", sans-serif;
 }
 
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+
+/* big titles */
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 100px;
+    margin-bottom: 2rem;
+    gap: 20px;
+    font-size: 25px;
+}
+
 
 /* NavBar */
 
@@ -19,7 +41,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     background-color: rgb(243, 246, 230);
-    color: rgb(87, 86, 86);
+    color: rgb(107, 106, 106);
     padding: 0 30px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -33,7 +55,12 @@ nav {
     font-size: 20px;
     list-style: none;
     padding-left: 100px;
+}
+
+.menu :hover {
+    color: rgb(0, 76, 8);
     cursor: pointer;
+    transition: 0.1;
 }
 
 .logo {
@@ -48,8 +75,6 @@ nav {
 
 .recherche-champ {
     padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
 }
 
 #recherche-icone {
@@ -118,7 +143,7 @@ label span,
     width: 100%;
 }
 
-#montant {
+#prix {
     font-size: 18px;
     font-weight: bold;
     color: #333;
@@ -139,7 +164,6 @@ label span,
     font-size: 16px;
     cursor: pointer;
     width: 50%;
-    /* Le bouton prend 50% de l'espace */
     margin-left: 20px;
 }
 
@@ -168,31 +192,15 @@ label span,
 }
 
 
-/* Styles de l'image de landing page */
-
-.landing-image-container {
-    width: 100%;
-    /* Prend toute la largeur de la page */
-}
+/* Landing page */
 
 .landing-image {
     width: 100%;
-    /* Prend toute la largeur du conteneur */
-    height: 1000px;
-    /* Conserve le ratio de l'image */
+    height: 600px;
 }
 
 
 /* Styles de section avantages */
-
-main {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    margin-top: 100px;
-    gap: 20px;
-}
 
 .title {
     position: relative;
@@ -222,16 +230,12 @@ main {
 
 .livraison-section {
     background-color: #f9f9f9;
-    /* Couleur de fond douce */
     padding: 20px;
-    /* Espacement intérieur */
 }
 
 .livraison-container {
     display: flex;
-    /* Utilise flexbox pour aligner les éléments en ligne */
     justify-content: space-between;
-    /* Espace entre les éléments */
     flex-wrap: wrap;
     /* Permet aux éléments de passer à la ligne si nécessaire */
     max-width: 1300px;
@@ -282,7 +286,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 5rem 10rem;
+    padding: 5rem 5rem;
     margin-top: 2rem;
     background-color: #f8f8f8;
 }
@@ -290,12 +294,12 @@ main {
 .content-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+    gap: 4rem;
 }
 
 .content-container img {
     width: 100%;
-    height: auto;
+    height: 100%;
 }
 
 .description-container h1 {
@@ -330,24 +334,8 @@ main {
 
 /* Styles de section produits */
 
-main {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    margin-top: 100px;
-    gap: 20px;
-    position: relative;
-    margin-bottom: 2rem;
-}
-
-main h1 {
-    font-size: 50px;
-    color: rgb(56, 188, 30)
-}
-
 main h1 span {
-    color: rgb(8, 60, 11);
+    color: rgb(56, 188, 30);
 }
 
 section {
@@ -357,19 +345,11 @@ section {
     padding-top: 50px;
 }
 
-main h1 {
-    font-size: 50px;
-}
-
-main h1 span {
-    color: rgb(150, 166, 85);
-}
-
 .cadre-container {
-    width: 1300px;
+    width: 1230px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
+    gap: 20px;
 }
 
 .Produits {
@@ -380,7 +360,6 @@ main h1 span {
     flex-direction: column;
     border-radius: 8px;
     gap: 10px;
-    overflow: hidden;
     box-shadow: 0px 11px 35px 0px rgba(198, 188, 188, 0.75);
     transition: .5s ease-in-out;
 }
@@ -412,20 +391,6 @@ main h1 span {
 
 /* Styles description produits */
 
-main {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    margin-top: 100px;
-    gap: 20px;
-}
-
-main h2 {
-    font-size: 50px;
-    color: rgb(27, 28, 27)
-}
-
 .product-presentation {
     display: flex;
     flex-wrap: wrap;
@@ -441,12 +406,11 @@ main h2 {
 
 .product-image img {
     width: 100%;
-    height: auto;
+    height: 550px;
     border-radius: 10px;
 }
 
 .product-description {
-    flex: 2;
     margin: 10px;
     padding: 20px;
     background-color: #f7f7f7;
@@ -492,7 +456,7 @@ main h2 {
 /* Footer */
 
 footer {
-    background-color: #f8f8f8;
+    background-color: #426159;
     /* Couleur de fond du footer */
     padding: 20px;
     /* Espacement interne */
@@ -512,7 +476,7 @@ footer {
 .footer-content p {
     margin: 10px 0;
     /* Espacement vertical autour du paragraphe */
-    color: #555;
+    color: #ffffff;
     /* Couleur du texte */
 }
 
@@ -535,7 +499,7 @@ footer {
 .footer-links a {
     text-decoration: none;
     /* Supprimer le soulignement des liens */
-    color: #525955;
+    color: #ffffff;
     /* Couleur des liens */
     transition: color 0.3s;
     /* Animation de la couleur */
@@ -554,7 +518,7 @@ footer {
 .social-media a {
     text-decoration: none;
     /* Supprimer le soulignement des liens */
-    color: #1e1818;
+    color: #ffffff;
     /* Couleur des liens de médias sociaux */
     margin: 0 10px;
     /* Espacement horizontal entre les liens */
